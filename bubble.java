@@ -13,30 +13,33 @@ public class bubble{
 
 	}
 
-	public static void creatArray(int[] arr){         //create random int array arr[]
+	public static void creatArray(int[] arr){         //create a random  int array arr[]
 		for(int i=0;i<10;i++){
 			arr[i] = (int)(Math.random()*(101));
 		}
 	}
 
-	public static void showArray(int[] arr){          //print the array arr[] in order
+	public static void showArray(int[] arr){          //print the array
 		for(int i=0;i<10;i++){
 			System.out.print(arr[i]+" ");
 		}
 		System.out.print("\n");
 	}
 
-	public static void bubbleSort(int[] arr){            //pop sort the random array arr[]
+	public static void bubbleSort(int[] arr){            //bubble sorting the array arr[]
+		int sign = 0;
 		for(int i=0;i<arr.length;i++){
 			for(int j=0;j<arr.length-i-1;j++){
+				sign++;                                 //
 				if(arr[j]>arr[j+1]){
 					swap(arr,j,j+1);
 				}
 			}
 		}
+		System.out.println("the cycle index is: "+sign);
 	}
 
-	public static void bubbleSortImproved(int[] arr){           //improving pop sorting
+	public static void bubbleSortImproved(int[] arr){           //improved bubble sorting
 		boolean needNextPass = true;
 		for(int i=0;i<arr.length && needNextPass;i++){
 			needNextPass = false;
