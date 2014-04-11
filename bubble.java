@@ -3,12 +3,12 @@ public class bubble{
 		int[] arr = new int[10];
 
 		creatArray(arr);
-		System.out.print("create random int array arr[]:            ");
+		System.out.print("create random int array arr[]:               ");
 		showArray(arr);
-		popSort(arr);
-		System.out.print("after pop sorting the random array arr[]: ");
-//		popSortImproved(arr);
-//		System.out.print("after the improving of pop sorting :      ");
+		bubbleSort(arr);
+		System.out.print("after bubble sorting the random array arr[]: ");
+//		bubbleSortImproved(arr);
+//		System.out.print("after the improving of bubble sorting :      ");
 		showArray(arr);
 
 	}
@@ -26,7 +26,7 @@ public class bubble{
 		System.out.print("\n");
 	}
 
-	public static void popSort(int[] arr){            //pop sort the random array arr[]
+	public static void bubbleSort(int[] arr){            //pop sort the random array arr[]
 		for(int i=0;i<arr.length;i++){
 			for(int j=0;j<arr.length-i-1;j++){
 				if(arr[j]>arr[j+1]){
@@ -36,7 +36,7 @@ public class bubble{
 		}
 	}
 
-	public static void popSortImproved(int[] arr){           //improving pop sorting
+	public static void bubbleSortImproved(int[] arr){           //improving pop sorting
 		boolean needNextPass = true;
 		for(int i=0;i<arr.length && needNextPass;i++){
 			needNextPass = false;
